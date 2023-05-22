@@ -11,7 +11,7 @@ def get_citations_needed_report(url):
     report = "CITATIONS NEEDED REPORT\n\n"
     data = parse(url)
     for entry in data[1]:
-        report += entry + "\n\n"
+        report += f"{entry.text}\n\n"
     return report
 
 
